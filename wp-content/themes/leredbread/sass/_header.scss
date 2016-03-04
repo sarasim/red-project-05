@@ -1,0 +1,42 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  // background-color: $color_background_offwhite;
+  height: 150px;
+  padding-top: 2.25rem;
+}
+
+.site-branding {
+  background-color: $color__background-body;
+
+  .site-branding-inner {
+    display: flex;
+    justify-content: space-between;
+
+    .logo img {
+      width: 300px;
+   }
+
+    .social-icons ul {
+     display: flex;
+     list-style: none;
+	   text-decoration: none;
+   }
+
+   .fa {
+     color: $color_brandmedgrey;
+     display: inline-block;
+     font-size: $font_size;
+     padding: 1rem;
+   }
+
+  }
+}
+
+.main-navigation {
+  background-color: $color__background-body;
+  border-bottom: $solid_border;
+  border-top: $solid_border;
+  width: 100%;
+}
