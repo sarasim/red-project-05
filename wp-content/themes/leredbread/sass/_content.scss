@@ -51,7 +51,27 @@
 
 /* my styles */
 
-.entry-meta {
-	color: $color_brandlightgrey;
-	font-weight: 100;
+.entry-header {
+
+	 a {
+		color: $color_brandred;
+	}
+
+	.entry-meta {
+		color: $color_brandlightgrey;
+		font-weight: 100;
+	}
+}
+
+.widget-title {
+	color: $color_branddarkgrey;
+	font-size: 1.1rem;
+
+	h1 {
+		text-transform: uppercase;
+	}
+
+	ul {
+		list-style: none;
+	}
 }

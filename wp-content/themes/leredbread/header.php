@@ -26,7 +26,7 @@
 				 	<div class="site-branding-inner container">
 						<div class="logo">
 							<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-							<img src="wp-content/themes/redstarter-master/images/lrb-logo.svg" alt="Le Red Bread Logo" />
+							<img src="<?php bloginfo('template_directory'); ?>/images/lrb-logo.svg " alt="Le Red Bread Logo" />
 						</div>
 						<div class="social-icons">
 							<ul>
@@ -44,10 +44,13 @@
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+			<!-- #site-navigation -->
 
-					<!-- php include searchform(); ?> -->
+				<div class="search-form">
+					<form class="search-form-inner"	input="text" ><?php get_search_form();?></form>
+				</div>
 
+			</nav>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

@@ -39,4 +39,34 @@
   border-bottom: $solid_border;
   border-top: $solid_border;
   width: 100%;
+
+  li {
+    border-right: $solid_border;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem;
+  }
+}
+
+a {
+  color: $color_brandmedgrey;
+
+  &:hover {
+    color: $color_branddarkgrey;
+  }
+
+}
+
+.search-form input, fieldset {
+  background: transparent;
+  border:none;
+  padding-left: 2rem;
+
+  button {
+    background: transparent;
+    border:none;
+    box-shadow: none;
+    color: $color_brandmedgrey;
+    font-size: 1rem;
+  }
 }
