@@ -19,22 +19,21 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 
-<!--grid-->
+			<div class="product-grid container">
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-        <!---Create a product square-->
-        <?php if ( has_post_thumbnail() ) : ?>
-    			<?php the_post_thumbnail( 'medium' ); ?>
-    		<?php endif; ?>
+        <div class="product-wrapper">
+        	<?php if ( has_post_thumbnail() ) : ?>
+    				<?php the_post_thumbnail( 'medium' ); ?>
+    			<?php endif; ?>
 
         	<?php the_title(); ?>
 
           <?php echo CFS()->get( 'price' ); ?>
 
-		
 
+				</div>
 			    <?php endwhile; ?>
 
 		    	<?php the_posts_navigation(); ?>
@@ -43,10 +42,12 @@ get_header(); ?>
 
 			 <?php get_template_part( 'template-parts/content', 'none' ); ?>
 			 	<?php wp_reset_postdata(); ?>
+
+
 	   	<?php endif; ?>
 
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
