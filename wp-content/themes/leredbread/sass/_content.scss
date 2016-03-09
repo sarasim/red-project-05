@@ -75,3 +75,90 @@
 		list-style: none;
 	}
 }
+
+/*content area flex, sidebar*/
+
+.site-content {
+	display: flex;
+	flex-direction: row;
+	width: 1024px;
+
+	.content-area {
+		border-right: $solid_border;
+		padding-right: 5%;
+		width: 73%;
+	}
+
+	.widget-area {
+		padding-left: 5%;
+
+	}
+}
+
+
+
+.widget {
+	color: $color_brandlightgrey;
+	font-weight: light;
+
+	.widget-title {
+		color: #333333;
+		font-size: 1.2rem;
+		margin-bottom: .75rem;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-bottom: .5rem;
+	}
+
+	.contact-meta i {
+		line-height: 1.5;
+		margin-right: .4rem;
+		width: 20px;
+	}
+
+	a, .weekday {
+		color: $color_brandred;
+	}
+
+	ul {
+		font-weight: lighter;
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+
+/*Home page*/
+
+.content-area-front {
+	width: 1240px;
+}
+
+.banner {
+	background:
+	url('../../images/hero-bread.jpg') center no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 600px;
+	width: 1240px;
+
+	.banner-text {
+		color: white;
+		font-size: 6rem;
+		line-height: 1;
+		text-align: center;
+		text-shadow: 2px 1px 2px rgba(100,100,100,.75);
+	}
+}
+
+.menu-items {
+	width: 1240px;
+
+	.menu-item-blocks {
+		display: flex;
+		justify-content: space-between;
+	}
+}

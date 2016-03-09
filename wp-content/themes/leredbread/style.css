@@ -231,34 +231,7 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
-@font-face {
-  font-family: 'Open Sans';
-  src: url("OpenSans-Light-webfont.eot");
-  src: url("OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Light-webfont.woff") format("woff"), url("OpenSans-Light-webfont.ttf") format("truetype"), url("OpenSans-Light-webfont.svg#open_sanslight") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("OpenSans-LightItalic-webfont.eot");
-  src: url("OpenSans-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-LightItalic-webfont.woff") format("woff"), url("OpenSans-LightItalic-webfont.ttf") format("truetype"), url("OpenSans-LightItalic-webfont.svg#open_sanslight_italic") format("svg");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("OpenSans-Bold-webfont.eot");
-  src: url("OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Bold-webfont.woff") format("woff"), url("OpenSans-Bold-webfont.ttf") format("truetype"), url("OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("OpenSans-BoldItalic-webfont.eot");
-  src: url("OpenSans-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-BoldItalic-webfont.woff") format("woff"), url("OpenSans-BoldItalic-webfont.ttf") format("truetype"), url("OpenSans-BoldItalic-webfont.svg#open_sansbold_italic") format("svg");
-  font-weight: bold;
-  font-style: italic; }
-
+/* --- Fonts --- */
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -594,6 +567,7 @@ a {
 .widget_search .search-submit {
   display: none; }
 
+/*side bar*/
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -633,9 +607,92 @@ a {
   display: block; }
 
 /* my styles */
-.entry-meta {
+.entry-header a {
+  color: #db272a; }
+
+.entry-header .entry-meta {
   color: #a1a1a1;
   font-weight: 100; }
+
+.widget-title {
+  color: #333333;
+  font-size: 1.1rem; }
+  .widget-title h1 {
+    text-transform: uppercase; }
+  .widget-title ul {
+    list-style: none; }
+
+/*content area flex, sidebar*/
+.site-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 1024px; }
+  .site-content .content-area {
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    width: 73%; }
+  .site-content .widget-area {
+    padding-left: 5%; }
+
+.widget {
+  color: #a1a1a1;
+  font-weight: light; }
+  .widget .widget-title {
+    color: #333333;
+    font-size: 1.2rem;
+    margin-bottom: .75rem;
+    text-transform: uppercase; }
+  .widget p {
+    margin-bottom: .5rem; }
+  .widget .contact-meta i {
+    line-height: 1.5;
+    margin-right: .4rem;
+    width: 20px; }
+  .widget a, .widget .weekday {
+    color: #db272a; }
+  .widget ul {
+    font-weight: lighter;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0; }
+
+/*Home page*/
+.content-area-front {
+  width: 1240px; }
+
+.banner {
+  background: url("../../images/hero-bread.jpg") center no-repeat;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 600px;
+  width: 1240px; }
+  .banner .banner-text {
+    color: white;
+    font-size: 6rem;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 2px 1px 2px rgba(100, 100, 100, 0.75); }
+
+.menu-items {
+  width: 1240px; }
+  .menu-items .menu-item-blocks {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
 
 /*--------------------------------------------------------------
 # Header
@@ -694,57 +751,76 @@ a {
     color: #808080;
     font-size: 1rem; }
 
+.current-menu-item {
+  border-bottom: 2px solid #db272a; }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
   background-color: #222222;
-  color: #ffffff; }
+  color: #ffffff;
+  margin: 0 auto;
+  width: 1240px; }
   .site-footer .footer-inner {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .site-footer .footer-inner .footer-inner-item {
+            justify-content: space-between;
+    width: 100%; }
+    .site-footer .footer-inner .footer-inner-item:nth-child(1) {
       line-height: 1;
-      margin: 3rem 1rem;
+      margin: 3rem 0;
+      padding-left: 2rem;
       width: 33%; }
-      .site-footer .footer-inner .footer-inner-item h3 {
+      .site-footer .footer-inner .footer-inner-item:nth-child(1) h3 {
         color: #a1a1a1;
         font-size: 1.1rem;
         font-weight: light;
         margin-bottom: 1rem;
         text-transform: uppercase; }
-      .site-footer .footer-inner .footer-inner-item p {
+      .site-footer .footer-inner .footer-inner-item:nth-child(1) p {
         margin-bottom: .5rem; }
-      .site-footer .footer-inner .footer-inner-item i {
+      .site-footer .footer-inner .footer-inner-item:nth-child(1) i {
         font-size: 1.25rem;
         margin-right: .5rem; }
-      .site-footer .footer-inner .footer-inner-item a {
+      .site-footer .footer-inner .footer-inner-item:nth-child(1) a {
         color: #ffffff;
         font-weight: lighter; }
     .site-footer .footer-inner .footer-inner-item:nth-child(2) {
-      margin: 3rem 1rem;
+      margin: 3rem 0;
       width: 33%; }
-      .site-footer .footer-inner .footer-inner-item:nth-child(2) 2
-img {
-        display: block;
-        margin: 0 auto; }
-      .site-footer .footer-inner .footer-inner-item:nth-child(2) .footer-inner-item:nth-child(3) .business-hours {
+      .site-footer .footer-inner .footer-inner-item:nth-child(2) .footer-logo {
+        font-size: 1rem;
+        line-height: 1.5; }
+        .site-footer .footer-inner .footer-inner-item:nth-child(2) .footer-logo img {
+          display: block;
+          margin: 3rem auto;
+          width: 15rem; }
+    .site-footer .footer-inner .footer-inner-item:nth-child(3) {
+      margin: 3rem 0;
+      width: 33%; }
+      .site-footer .footer-inner .footer-inner-item:nth-child(3) .business-hours {
         float: right; }
-        .site-footer .footer-inner .footer-inner-item:nth-child(2) .footer-inner-item:nth-child(3) .business-hours h3 {
+        .site-footer .footer-inner .footer-inner-item:nth-child(3) .business-hours h3 {
           color: #a1a1a1;
           font-size: 1.1rem;
           font-weight: light;
           margin-bottom: 1rem;
           text-transform: uppercase; }
-  .site-footer .site-info {
-    background-color: #333333;
-    font-size: .8rem;
-    display: block;
-    padding: 1.5rem 1rem; }
+        .site-footer .footer-inner .footer-inner-item:nth-child(3) .business-hours p {
+          margin-bottom: .5rem; }
+        .site-footer .footer-inner .footer-inner-item:nth-child(3) .business-hours .weekday {
+          font-weight: bold; }
+
+.site-info {
+  background-color: #333333;
+  font-size: .8rem;
+  display: block;
+  padding: 1.5rem 0;
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Media

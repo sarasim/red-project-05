@@ -27,20 +27,20 @@
 							<img src="<?php bloginfo('template_directory'); ?>/images/lrb-logo-white.svg " alt="Le Red Bread Logo" />
 						</div>
 					</div>
-					<div class="footer-inner-item">
-						<div class="business-hours">
-							<h3>Business Hours</h3>
-						</div>
-					</div>
-
-					<div class="site-info">
-						<!-- <div class="container"> -->
-							<p>Copyright 2015 Le Red Bread</p>
-					  	<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
-					  <!-- </div> -->
-					</div><!-- .site-info -->
-
+					 <div class="footer-inner-item">
+					 	<div class="business-hours">
+						 	<h3>Business Hours</h3>
+							<p><span class="weekday">Monday-Friday:</span> 9am to 5pm</p>
+							<p><span class="weekday">Saturday:</span> 10am to 2pm</p>
+							<p><span class="weekday">Sunday:</span> Closed</p>
+						 </div>
+					 </div>
 				</div>
+				<div class="site-info">
+						<p>Copyright 2015 Le Red Bread</p>
+				</div>
+
+
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
