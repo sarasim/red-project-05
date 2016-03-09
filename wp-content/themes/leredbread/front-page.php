@@ -10,7 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area-front">
 		<main id="main" class="site-main-front" role="main">
 			<section class="banner">
-				<h1 class="banner-text">Baked to <br> Perfection.</h1>
+				<h1 class="banner-text">Baked to Perfection.</h1>
 			</section>
 
 		 <section class="menu-items container">
