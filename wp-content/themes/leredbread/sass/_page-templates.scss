@@ -3,3 +3,197 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.banner {
+	background:
+	url('../../images/hero-bread.jpg') center no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 600px;
+	width: 100%;
+
+	.banner-text {
+		color: white;
+		font-size: 6rem;
+		line-height: 1;
+		text-align: center;
+		text-shadow: 2px 1px 2px rgba(100,100,100,.75);
+	}
+}
+
+/*icons/products */
+
+.menu-items {
+	width: 1024px;
+
+	.menu-item-inner {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 2rem;
+
+		.menu-item-wrapper {
+			padding: 1rem;
+			width: 25%;
+		}
+
+		img {
+			display: block;
+			padding-left: 4rem;
+		}
+
+		h3 {
+			margin-bottom: 1rem;
+			text-transform: uppercase;;
+			text-align: center;
+		}
+
+		p {
+			padding: 1rem;
+		}
+
+		a{
+			color: $color_brandred;
+		}
+	}
+}
+
+/*See Our Products*/
+.click-for-more {
+	background: $color_background_offwhite;
+	border-top: $solid_border;
+	border: $solid_border;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3rem;
+	width: 80%;
+
+	span {
+		padding-left: 1rem;
+		margin: .5rem;
+	}
+
+	button {
+		background:$color_brandbrown;
+		border: none;
+		border-radius: 3px;
+		box-shadow: none;
+		color: #ffffff;
+		cursor: pointer;
+		font-size: 1rem;
+		padding: .8rem 1.5rem;
+		text-decoration: none;
+		text-shadow: none;
+
+		&:hover {
+			background: $color_brandred;
+			color: #ffffff;
+			text-decoration: underline;
+		}
+	}
+}
+
+.latest-posts {
+	background: $color_background_offwhite;
+	border: $solid_border;
+	padding: 3rem;
+	margin: 0 auto;
+	width: 100%;
+
+	h2 {
+		color: $color_branddarkgrey;
+		padding-bottom: 2rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.latest-posts-inner {
+ 		width: 100%;
+
+		ul {
+			display: flex;
+			justify-content:space-between;
+			list-style: none;
+
+			li {
+				background: #ffffff;
+				border: $solid_border;
+				flex: 1 0 25%;
+				max-width: 25%;
+
+				.thumbnail-wrapper {
+					height: 100px;
+					overflow: hidden;
+
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+  }
+}
+
+.testamonials {
+	margin-bottom: 3rem;
+
+		h2 {
+			color: $color_branddarkgrey;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content:space-between;
+			list-style: none;
+
+			li {
+				border: $dashed_border;
+				display: flex;
+				flex: 1 0 50%;
+				max-width: 50%;
+			}
+		}
+}
+
+/* About Page */
+
+.about-header {
+	line-height: 1;
+	margin-bottom: 3rem;
+
+	h1, p {
+		text-align: center;
+	}
+}
+
+.about-info {
+	display:flex;
+	justify-content: space-between;
+
+	.about-info-item {
+		flex: 0 1 50%;
+		padding: 1rem;
+	}
+}
+
+.our-story {
+
+	h2 {
+		text-align: center;
+	}
+}
+
+/*Products Page*/
+
+.products-page {
+	margin: 0 auto;
+	padding-bottom: 3rem;
+
+		.page-title, p {
+			text-align: center;
+		}
+}

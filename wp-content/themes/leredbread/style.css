@@ -53,7 +53,8 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  margin: 0; }
+  margin: 0;
+  max-width: 1024px; }
 
 article,
 aside,
@@ -297,14 +298,15 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: "Overlock"; }
 
 /* Copy */
 p {
@@ -674,7 +676,8 @@ a {
   color: #333333;
   font-size: 1.1rem; }
   .widget-title h1 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 20rem; }
   .widget-title ul {
     list-style: none; }
 
@@ -686,7 +689,8 @@ a {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 1024px; }
+  width: 1024px;
+  margin: 0 auto; }
   .site-content .content-area {
     border-right: 1px solid #e1e1e1;
     padding-right: 5%;
@@ -715,131 +719,6 @@ a {
     list-style: none;
     margin-left: 0;
     padding-left: 0; }
-
-/*Home page*/
-.content-area-front {
-  width: 1240px; }
-
-.banner {
-  background: url("../../images/hero-bread.jpg") center no-repeat;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 600px;
-  width: 1240px; }
-  .banner .banner-text {
-    color: white;
-    font-size: 6rem;
-    line-height: 1;
-    text-align: center;
-    text-shadow: 2px 1px 2px rgba(100, 100, 100, 0.75); }
-
-/*icons/products */
-.menu-items {
-  width: 1240px; }
-  .menu-items .menu-item-inner {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-top: 2rem;
-    width: 1240px; }
-    .menu-items .menu-item-inner .menu-item-wrapper {
-      padding: 1rem;
-      width: 25%; }
-    .menu-items .menu-item-inner img {
-      display: block;
-      padding-left: 4rem; }
-    .menu-items .menu-item-inner h3 {
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      text-align: center; }
-    .menu-items .menu-item-inner p {
-      padding: 1rem; }
-    .menu-items .menu-item-inner a {
-      color: #db272a; }
-
-/*See Our Products*/
-.click-for-products {
-  background: #fafafa;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 3rem; }
-  .click-for-products span {
-    margin: .5rem; }
-  .click-for-products button {
-    background: #400c0d;
-    border: none;
-    border-radius: 3px;
-    box-shadow: none;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: .8rem 1.5rem;
-    text-decoration: none;
-    text-shadow: none; }
-    .click-for-products button:hover {
-      background: #db272a;
-      text-decoration: underline; }
-
-.latest-posts-inner {
-  background: #fafafa;
-  border-bottom: 1px solid #e1e1e1;
-  width: 100%; }
-  .latest-posts-inner h2 {
-    color: #333333;
-    text-align: center;
-    text-transform: uppercase; }
-  .latest-posts-inner ul {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    list-style: none; }
-    .latest-posts-inner ul li {
-      background: #ffffff;
-      border: 1px solid #e1e1e1;
-      -webkit-flex: 1 0 25%;
-          -ms-flex: 1 0 25%;
-              flex: 1 0 25%;
-      max-width: 25%; }
-
-.testamonials {
-  margin-bottom: 3rem; }
-  .testamonials h2 {
-    color: #333333;
-    text-align: center;
-    text-transform: uppercase; }
-  .testamonials ul {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    list-style: none; }
-    .testamonials ul li {
-      border: 1px dashed #d2d2d2;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex: 1 0 50%;
-          -ms-flex: 1 0 50%;
-              flex: 1 0 50%;
-      max-width: 50%; }
 
 /* Products grid */
 .product-grid {
@@ -926,16 +805,14 @@ a {
 .site-footer {
   background-color: #222222;
   color: #ffffff;
-  margin: 0 auto;
-  width: 1240px; }
+  margin: 0 auto; }
   .site-footer .footer-inner {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%; }
+            justify-content: space-between; }
     .site-footer .footer-inner .footer-inner-item:nth-child(1) {
       line-height: 1;
       margin: 3rem 0;
@@ -1052,3 +929,168 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.banner {
+  background: url("../../images/hero-bread.jpg") center no-repeat;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 600px;
+  width: 100%; }
+  .banner .banner-text {
+    color: white;
+    font-size: 6rem;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 2px 1px 2px rgba(100, 100, 100, 0.75); }
+
+/*icons/products */
+.menu-items {
+  width: 1024px; }
+  .menu-items .menu-item-inner {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 2rem; }
+    .menu-items .menu-item-inner .menu-item-wrapper {
+      padding: 1rem;
+      width: 25%; }
+    .menu-items .menu-item-inner img {
+      display: block;
+      padding-left: 4rem; }
+    .menu-items .menu-item-inner h3 {
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      text-align: center; }
+    .menu-items .menu-item-inner p {
+      padding: 1rem; }
+    .menu-items .menu-item-inner a {
+      color: #db272a; }
+
+/*See Our Products*/
+.click-for-more {
+  background: #fafafa;
+  border-top: 1px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  width: 80%; }
+  .click-for-more span {
+    padding-left: 1rem;
+    margin: .5rem; }
+  .click-for-more button {
+    background: #400c0d;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .8rem 1.5rem;
+    text-decoration: none;
+    text-shadow: none; }
+    .click-for-more button:hover {
+      background: #db272a;
+      color: #ffffff;
+      text-decoration: underline; }
+
+.latest-posts {
+  background: #fafafa;
+  border: 1px solid #e1e1e1;
+  padding: 3rem;
+  margin: 0 auto;
+  width: 100%; }
+  .latest-posts h2 {
+    color: #333333;
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .latest-posts .latest-posts-inner {
+    width: 100%; }
+    .latest-posts .latest-posts-inner ul {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      list-style: none; }
+      .latest-posts .latest-posts-inner ul li {
+        background: #ffffff;
+        border: 1px solid #e1e1e1;
+        -webkit-flex: 1 0 25%;
+            -ms-flex: 1 0 25%;
+                flex: 1 0 25%;
+        max-width: 25%; }
+        .latest-posts .latest-posts-inner ul li .thumbnail-wrapper {
+          height: 100px;
+          overflow: hidden; }
+          .latest-posts .latest-posts-inner ul li .thumbnail-wrapper img {
+            width: 100%; }
+
+.testamonials {
+  margin-bottom: 3rem; }
+  .testamonials h2 {
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase; }
+  .testamonials ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none; }
+    .testamonials ul li {
+      border: 1px dashed #d2d2d2;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex: 1 0 50%;
+          -ms-flex: 1 0 50%;
+              flex: 1 0 50%;
+      max-width: 50%; }
+
+/* About Page */
+.about-header {
+  line-height: 1;
+  margin-bottom: 3rem; }
+  .about-header h1, .about-header p {
+    text-align: center; }
+
+.about-info {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .about-info .about-info-item {
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    padding: 1rem; }
+
+.our-story h2 {
+  text-align: center; }
+
+/*Products Page*/
+.products-page {
+  margin: 0 auto;
+  padding-bottom: 3rem; }
+  .products-page .page-title, .products-page p {
+    text-align: center; }

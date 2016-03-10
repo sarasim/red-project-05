@@ -5,12 +5,10 @@
   background-color: #222222;
   color: #ffffff;
   margin: 0 auto;
-  width: 1240px;
 
   .footer-inner {
     display: flex;
     justify-content: space-between;
-    width: 100%;
 
     .footer-inner-item:nth-child(1) {
       line-height: 1;
@@ -91,7 +89,4 @@
    display:block;
    padding: 1.5rem 0;
    text-align: center;
-
-
-
 }

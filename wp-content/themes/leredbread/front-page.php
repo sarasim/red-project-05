@@ -9,6 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area-front">
 		<main id="main" class="site-main-front" role="main">
+
 			<section class="banner">
 				<h1 class="banner-text">Baked to Perfection.</h1>
 			</section>
@@ -40,7 +41,7 @@ get_header(); ?>
 
 		  </div>
 		 </section>
-		 <div class="click-for-products">
+		 <div class="click-for-more container">
 			 <p><span>All of our products are made fresh daily from locally-sourced ingredients. Our menu is updated frequently.</span>
 
 			 <button><a href="<?php echo get_term_link( $term ); ?>">See Our Products</a></button>
@@ -48,20 +49,21 @@ get_header(); ?>
 		 </div>
 
 		 <section class="latest-posts">
-			 <div class="latest-posts-inner container">
-				 <h2>Our Latest News</h2>
-			<ul> <?php
+			 <h2>Our Latest News</h2>
+			  <div class="latest-posts-inner">
+			 <?php
 	   		$args = array( 'post_type' => 'post', 'posts_per_page' => 4 );
 	   		$latest_posts = get_posts( $args );
 		 	 ?>
-			   <li>
-		   		<?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
+			 <ul>
 
-		 			<?php if ( has_post_thumbnail() ) : ?>
-						<div class="thumbnail-wrapper">
-							<?php the_post_thumbnail( 'medium' ); ?>
-						</div>
-					<?php endif; ?>
+		   	<?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
+				 <li>
+		 		   	<?php if ( has_post_thumbnail() ) : ?>
+							<div class="thumbnail-wrapper">
+								<?php the_post_thumbnail( 'medium' ); ?>
+							</div>
+						<?php endif; ?>
 
 						<div class="post-info-wrapper">
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
