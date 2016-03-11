@@ -8,25 +8,28 @@
  <div id="primary" class="content-area">
    <main id="main" class="site-main" role="main">
 
-    <div class="about container">
+    <div class="about-page container">
 
       <header class="about-header">
        <h1>Learn About Our Team and Culture</h1>
         <p><?php echo CFS()->get( 'tagline' ); ?></p>
+        <hr class="decorative"></hr>
       </header>
 
       <div class="entry-content">
 
         <div class="about-info">
           <div class="about-info-item">
-                 <img src="../images/team.jpg" />
-            <h2>Le Red Bread Team</h2>
+             <img src="<?php bloginfo('template_directory'); ?>/images/team.jpg" alt="Le Red Bread Team" />
+            <h3>Le Red Bread Team</h3>
+            <span class="sub-header">Baking up a storm every day.</span>
             <p><?php echo CFS()->get( 'team_copy' ); ?></p>
           </div>
 
           <div class="about-info-item">
-            <img src="../images/bakery,jpg" />
-            <h2>Le Red Bread Bakery</h2>
+            <img src="<?php bloginfo('template_directory'); ?>/images/bakery.jpg" alt="Le Red Bread Bakery" />
+            <h3>Le Red Bread Bakery</h3>
+            <span class="sub-header">A home away from home.</span>
             <p><?php echo CFS()->get( 'bakery_copy' ); ?></p>
           </div>
         </div>

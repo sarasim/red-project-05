@@ -2,75 +2,81 @@
 # Header
 --------------------------------------------------------------*/
 .site-header {
-  // background-color: $color_background_offwhite;
+  background-color: $color_background_offwhite;
   height: 150px;
   padding-top: 2.25rem;
-}
 
-.site-branding {
-  background-color: $color__background-body;
+  .site-branding {
+    background-color: $color__background-body;
+    border-top: $solid_border;
+    padding: 1.5rem;
 
-  .site-branding-inner {
-    display: flex;
-    justify-content: space-between;
+    .site-branding-inner {
+      display: flex;
+      justify-content: space-between;
 
-    .logo img {
-      width: 300px;
-   }
+     .logo img {
+       width: 300px;
+    }
 
-    .social-icons ul {
-     display: flex;
-     list-style: none;
-	   text-decoration: none;
-   }
+     .social-icons ul {
+       display: flex;
+       list-style: none;
+	     text-decoration: none;
+     }
 
    .fa {
      color: $color_brandmedgrey;
      display: inline-block;
      font-size: $font_size;
      padding: 1rem;
-   }
-
+    }
   }
+ }
 }
 
 .main-navigation {
   background-color: $color__background-body;
-  border-bottom: $solid_border;
   border-top: $solid_border;
+  border-bottom: $solid_border;
   width: 100%;
 
-  li {
-    border-right: $solid_border;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 1rem;
+  .main-navigation-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+
+    li {
+      border-right: $solid_border;
+      border-left: $solid_border;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 1rem;
+
+      a {
+        color: $color_brandmedgrey;
+
+      &:hover {
+        color: $color_branddarkgrey;
+        }
+      }
+    }
+
+    .search-form input, fieldset {
+      background: transparent;
+      border:none;
+      font-weight: 400;
+      padding-top: 10px;
+
+      button {
+        background: transparent;
+        border:none;
+        box-shadow: none;
+        color: #000;
+        color: $color_brandmedgrey;
+        font-size: 1rem;
+      }
+    }
   }
-}
-
-a {
-  color: $color_brandmedgrey;
-
-  &:hover {
-    color: $color_branddarkgrey;
-  }
-
-}
-
-.search-form input, fieldset {
-  background: transparent;
-  border:none;
-  padding-left: 2rem;
-
-  button {
-    background: transparent;
-    border:none;
-    box-shadow: none;
-    color: $color_brandmedgrey;
-    font-size: 1rem;
-  }
-}
-
-.current-menu-item {
-  border-bottom: 2px solid #db272a;
 }

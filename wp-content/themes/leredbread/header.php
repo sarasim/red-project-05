@@ -42,14 +42,15 @@
 		</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="main-navigation-inner container">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			<!-- #site-navigation -->
 
-				<div class="search-form">
-					<form class="search-form-inner"	input="text" ><?php get_search_form();?></form>
+					<div class="search-form">
+						<form class="search-form-inner"	input="text" ><?php get_search_form();?></form>
+					</div>
 				</div>
-
 			</nav>
 			</header><!-- #masthead -->
 

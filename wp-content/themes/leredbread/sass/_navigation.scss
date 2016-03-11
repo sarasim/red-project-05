@@ -7,13 +7,10 @@
 a {
 	color: $color_brandred;
 
-	&:visited {
-		color: $color__link-visited;
-	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color_brandmedgrey;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -27,6 +24,7 @@ a {
 /* Menus */
 
 .main-navigation {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	clear: both;
 	display: block;
 	float: left;
@@ -39,7 +37,6 @@ a {
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
 			top: $base__space-unit;
@@ -129,4 +126,8 @@ a {
 		text-align: right;
 		width: 50%;
 	}
+}
+
+.current-menu-item {
+  border-bottom: 3px solid $color_brandred;
 }

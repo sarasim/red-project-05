@@ -10,7 +10,7 @@ body {
 	font-size: $font_size;
 	line-height: 1.5;
 	margin: 0;
-	max-width: 1024px;
+	width: 100vw;
 }
 
 article,
@@ -220,6 +220,10 @@ td,
 th {
 	padding: 0;
 }
-.container {
-	max-width: 1024px;
-}
+
+
+// hr {
+// 	box-sizing: content-box;
+// 	background-color: #ccc;
+// 	height: 1px;
+// }

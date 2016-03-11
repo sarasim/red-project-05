@@ -90,6 +90,18 @@ function red_starter_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if ( is_single() ) {
+		wp_enqueue_script( 'jquery');
+
+		wp_enqueue_script( 'lrb_comment_close', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), false, true );
+
+		wp_localize_script( 'lrb_comment_close', 'lrb_vars', array(
+			'rest_url' => esc_url_raw( rest_url() ),
+			'comment_nonce' => wp_create_nonce( 'wp_rest' ),
+			'post_id' =>get_the_ID()
+	 ) );
+ }
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
@@ -102,3 +114,35 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+// function lrb_comments_close_ajax() {
+//
+// 	check_ajax_referer('lrb_comment_status', 'security');
+//
+// 	if( ! current_user_can( 'edit_posts' ) ) {
+// 		exit;
+// 	}
+//
+// 	$id = $_POST('the_post_id');
+//
+// 	if ( isset( $id ) && is_numeric( $id) ) {
+// 		$the_post = array(
+// 			'ID' => $id,
+// 			'comment_status' => 'open'
+// 		);
+//
+// 		wp_update_post( $the_post );
+//
+// 	}
+//
+// 	exit;
+// }
+//
+// add_action( 'wp_ajax_red_comment_ajax', 'lrb_comments_close_ajax' );
+
+//wp_update_post will take an array as an arg so make an array above with post id and comment session_status
+//when invoked, wp will
+//'security' is from data object in scripts.js file- checking security
+//_POST super global!!
+//exit, or die! to kill the ajax request
+//add_action is last step, never use wp_ajax by itself, always followed by _ with whatever we passed in data object as the request- the action in the js

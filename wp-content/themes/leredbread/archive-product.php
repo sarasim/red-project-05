@@ -10,10 +10,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="products-page">
+			<div class="archive-page container">
 			<?php if ( have_posts() ) : ?>
 
-				<header class="products-header">
+				<header class="products-header container">
 					<?php
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
@@ -21,7 +21,9 @@ get_header(); ?>
 					<p>We are a team of creative and talented individuals who love making delicious treats.</p>
 				</header><!-- .page-header -->
 
-				<section class="menu-items container">
+				<hr class="decorative"></hr>
+
+				<section class="menu-items">
 
 	 			 <div class="menu-item-inner">
 
@@ -51,7 +53,7 @@ get_header(); ?>
 
         <div class="product-wrapper">
         	<?php if ( has_post_thumbnail() ) : ?>
-    				<?php the_post_thumbnail( 'medium' ); ?>
+    				<?php the_post_thumbnail( 'large' ); ?>
     			<?php endif; ?>
 
         	<?php the_title(); ?>

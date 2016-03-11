@@ -49,7 +49,7 @@
 }
 
 
-/* my styles */
+/* Blog */
 
 .entry-header {
 
@@ -79,21 +79,29 @@
 
 /*content area flex, sidebar*/
 
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.blog, .single, .error404, .page:not(.home), .archive:not(.post-type-archive-product) {
+
 .site-content {
 	display: flex;
 	flex-direction: row;
 	width: 1024px;
 	margin: 0 auto;
 
-	.content-area {
+  }
+
+	.site-main {
 		border-right: $solid_border;
-		padding-right: 5%;
 		width: 73%;
-	}
 
 	.widget-area {
 		padding-left: 5%;
-	}
+  }
+ }
 }
 
 .widget {
@@ -129,17 +137,40 @@
 	}
 }
 
-/* Products grid */
+/*Contact Page*/
 
-.product-grid {
-	align-content: flex-start;
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 3rem;
+.page-id-23 {
 
-	.product-wrapper {
-		border: $solid_border;
-		flex: 0 1 25%;
-		max-width: 25%;
+	.entry-title {
+		color: $color_brandnearblack;
+		margin-top: 0;
+		text-transform: uppercase;
+	}
+
+	h3 {
+		color: $color_brandmedgrey;
+		font-size: 1.8rem;
+	}
+
+
+	.wpcf7-form {
+		margin: 0;
+		padding: 0;
+
+		p {
+			color: $color_brandmedgrey;
+			font-weight: 700;
+			margin-bottom: .5rem;
+		}
+
+		input, textarea {
+			background-color: $color_background_offwhite;
+		}
+
+		.name {
+			float: left;
+			margin-right: 1%;
+			width: 49%;
+		}
 	}
 }
