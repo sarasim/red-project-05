@@ -25,8 +25,8 @@
 				<div class="site-branding">
 				 	<div class="site-branding-inner container">
 						<div class="logo">
-							<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-							<img src="<?php bloginfo('template_directory'); ?>/images/lrb-logo.svg " alt="Le Red Bread Logo" />
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<img src="<?php echo get_template_directory_uri() . '/images/lrb-logo.svg'; ?>" alt="Le Red Bread Logo" /></a>	
 						</div>
 						<div class="social-icons">
 							<ul>
@@ -42,11 +42,12 @@
 		</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="main-navigation-inner container">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+				<div class="container">
+					<div class="main-navigation-inner container">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			<!-- #site-navigation -->
-
+					</div>
 					<div class="search-form">
 						<form class="search-form-inner"	input="text" ><?php get_search_form();?></form>
 					</div>

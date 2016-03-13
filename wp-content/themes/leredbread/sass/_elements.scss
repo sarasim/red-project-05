@@ -71,4 +71,12 @@ table {
 
 .container {
 	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clearfix {
+	content: "";
+	clear: both;
+	display: table;
 }

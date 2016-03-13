@@ -37,7 +37,9 @@ get_header(); ?>
 
 	 				 <div class="menu-item-wrapper>">
 	 					 <img src="<?php echo get_template_directory_uri() . '/images\/' . $term->slug; ?>.png" alt="" />
-	 			  		<h3><?php echo $term->name; ?></h3>
+
+							<h3><?php echo $term->name; ?></h3>
+
 	 				 </div>
 
 	 		 		<?php endforeach; ?>
@@ -53,7 +55,7 @@ get_header(); ?>
 
         <div class="product-wrapper">
         	<?php if ( has_post_thumbnail() ) : ?>
-    				<?php the_post_thumbnail( 'large' ); ?>
+    				<a href="<?php the_permalink();?>"><?php the_post_thumbnail( 'large' ); ?></a>
     			<?php endif; ?>
 
         	<?php the_title(); ?>

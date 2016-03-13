@@ -9,74 +9,70 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 			<section class="banner">
 				<h1 class="banner-text">Baked to Perfection.</h1>
 			</section>
+		 	<section class="menu-items container">
+				<div class="menu-item-inner">
 
-		 <section class="menu-items container">
-
-			 <div class="menu-item-inner">
-
-					 <?php $terms = get_terms( 'product-type');
-			  	?>
+				<?php $terms = get_terms( 'product-type');?>
 
 				<?php if ( ! empty( $terms ) ) : ?>
 
-		 		<?php foreach ($terms as $term) : ?>
+					<?php foreach ($terms as $term) : ?>
 
+ 					<div class="menu-item-wrapper>">
+					 	<img src="<?php echo get_template_directory_uri() . '/images\/' . $term->slug; ?>.png" alt="" />
+			  	 	<h3><?php echo $term->name; ?></h3>
+					 	<p>
+			    		<?php echo $term->description; ?> <a href="<?php echo get_term_link( $term ); ?>">See More...</a>
+					 	</p>
+				  </div>
 
-				 <div class="menu-item-wrapper>">
-					 <img src="<?php echo get_template_directory_uri() . '/images\/' . $term->slug; ?>.png" alt="" />
-			  		<h3><?php echo $term->name; ?></h3>
+		 			<?php endforeach; ?>
 
-						<p>
-							<?php echo $term->description; ?> <a href="<?php echo get_term_link( $term ); ?>">See More...</a>
-						</p>
-				 </div>
+				<?php endif; ?>
 
-		 		<?php endforeach; ?>
-
-			<?php endif; ?>
-
-		  </div>
-		 </section>
-		 <div class="click-for-more container">
-			 <p><span>All of our products are made fresh daily from locally-sourced ingredients. Our menu is updated frequently.</span>
-
-			 <button><a href="<?php echo get_term_link( $term ); ?>">See Our Products</a></button>
+		  	</div>
+		 	</section>
+		 	<div class="click-for-more container">
+			 	<p><span>All of our products are made fresh daily from locally-sourced ingredients. Our menu is updated frequently.</span>
+					<button><a href="<?php echo get_term_link( $term ); ?>">See Our Products</a></button>
 			  </p>
-		 </div>
+		 	</div>
+ 			<section class="latest-posts">
+				<div class="latest-posts-inner container">
+			 	 <h2>Our Latest News</h2>
+			 	 <hr class="decorative"></hr>
 
-		 <section class="latest-posts">
-			 <h2>Our Latest News</h2>
-			 <hr class="decorative"></hr>
-			  <div class="latest-posts-inner container">
-			 <?php
-	   		$args = array( 'post_type' => 'post', 'posts_per_page' => 4 );
-	   		$latest_posts = get_posts( $args );
-		 	 ?>
 
-			 <ul>
+			 		<?php $args = array( 'post_type' => 'post', 'posts_per_page' => 4 ); $latest_posts = get_posts( $args );?>
 
-		   	<?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
-				 <li>
-		 		   	<?php if ( has_post_thumbnail() ) : ?>
-							<div class="thumbnail-wrapper">
-								<?php the_post_thumbnail( 'medium' ); ?>
+					<ul>
+
+		   		<?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
+
+				 		<li>
+		 		   		<?php if ( has_post_thumbnail() ) : ?>
+								<div class="thumbnail-wrapper">
+									<?php the_post_thumbnail( 'large' ); ?>
+								</div>
+							<?php endif; ?>
+
+							<div class="post-info">
+								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<span class="entry-meta">
+
+									<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+
+								</span>
 							</div>
-						<?php endif; ?>
+					 </li>
 
-						<div class="post-info">
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-							<span class="entry-meta">
-								<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
-							</span>
-						</div>
-				 </li>
-				<?php endforeach; wp_reset_postdata(); ?>
-			</ul>
-			 </div>
+					<?php endforeach; wp_reset_postdata(); ?>
+
+					</ul>
+			 		</div>
 			</section>
 			<section class="testamonials">
 				<div class="testamonials-inner container">
