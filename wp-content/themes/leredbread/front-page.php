@@ -45,7 +45,6 @@ get_header(); ?>
 			 	 <h2>Our Latest News</h2>
 			 	 <hr class="decorative"></hr>
 
-
 			 		<?php $args = array( 'post_type' => 'post', 'posts_per_page' => 4 ); $latest_posts = get_posts( $args );?>
 
 					<ul>
@@ -53,10 +52,13 @@ get_header(); ?>
 		   		<?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
 
 				 		<li>
+
 		 		   		<?php if ( has_post_thumbnail() ) : ?>
+
 								<div class="thumbnail-wrapper">
 									<?php the_post_thumbnail( 'large' ); ?>
 								</div>
+
 							<?php endif; ?>
 
 							<div class="post-info">
@@ -74,7 +76,7 @@ get_header(); ?>
 					</ul>
 			 		</div>
 			</section>
-			<section class="testamonials">
+			<section class="testamonials container">
 				<div class="testamonials-inner container">
 					<h2> What Others Say About Us</h2>
 					<hr class="decorative"></hr>
