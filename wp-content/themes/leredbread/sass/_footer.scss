@@ -2,25 +2,27 @@
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #222222;
-  color: #ffffff;
-  margin: 0 auto;
+  background-color: #222;
+  color: #fff;
 
   .footer-inner {
     display: flex;
     justify-content: space-between;
 
+    .footer-inner-item {
+      margin: 3rem 0;
+      width: 33%;
+    }
+
     .footer-inner-item:nth-child(1) {
       line-height: 1;
       margin: 3rem 0;
-      padding-left: 2rem;
       width: 33%;
 
       h3 {
         color:$color_brandlightgrey;
-        font-size: 1.1rem;
-        font-weight: light;
-        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        margin-bottom: .75rem;
         text-transform: uppercase;
       }
 
@@ -40,33 +42,26 @@
     }
 
     .footer-inner-item:nth-child(2) {
-      margin: 3rem 0;
-      width: 33%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
-      .footer-logo {
-        font-size: 1rem;
-        line-height: 1.5;
-
-        img {
-         display: block;
-         margin: 3rem auto;
-         width: 15rem;
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 15rem;
       }
     }
-  }
 
     .footer-inner-item:nth-child(3) {
-      margin: 3rem 0;
-      width: 33%;
 
       .business-hours {
         float: right;
 
         h3 {
           color:$color_brandlightgrey;
-          font-size: 1.1rem;
-          font-weight: light;
-          margin-bottom: 1rem;
+          font-size: 1.2rem;
+          margin-bottom: .75rem;
           text-transform: uppercase;
         }
 
@@ -81,12 +76,10 @@
     }
   }
 
- }
-
  .site-info {
    background-color: $color_branddarkgrey;
    font-size: .8rem;
-   display:block;
    padding: 1.5rem 0;
    text-align: center;
+ }
 }

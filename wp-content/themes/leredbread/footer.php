@@ -37,7 +37,8 @@
 					 </div>
 				</div>
 				<div class="site-info">
-						<p>Copyright 2015 Le Red Bread</p>
+					<div class="container">Copyright 2015 Le Red Bread
+					</div>
 				</div>
 
 
