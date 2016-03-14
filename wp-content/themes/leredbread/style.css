@@ -1029,7 +1029,7 @@ object {
       .home .click-for-more button a {
         color: #fff; }
       .home .click-for-more button:hover {
-        background: #db272a;
+        background: #861618;
         text-decoration: underline; }
   .home .latest-posts {
     background: #fafafa;
@@ -1187,67 +1187,100 @@ object {
           color: #db272a; }
 
 /* About Page */
-.page .content-area .about-header {
-  line-height: 1;
-  margin-bottom: 3rem; }
-  .page .content-area .about-header h1 {
-    font-size: 2.1rem;
-    margin-bottom: .5rem;
-    text-align: center;
-    text-transform: uppercase; }
-  .page .content-area .about-header p {
-    margin-bottom: 3rem;
+.page-template-about .content-area {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+  .page-template-about .content-area .about-header {
     text-align: center; }
-
-.page .content-area .about-info {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .page .content-area .about-info .about-info-item {
-    -webkit-flex: 0 1 47.5%;
-        -ms-flex: 0 1 47.5%;
-            flex: 0 1 47.5%; }
-  .page .content-area .about-info h3 {
-    color: #400c0d;
-    font-size: 1.6rem;
-    margin: 0; }
-  .page .content-area .about-info .sub-header {
-    color: #a1a1a1; }
-
-.page .content-area .our-story h2 {
-  color: #333333;
-  font-size: 1.8rem;
-  text-align: center; }
-
-.page .content-area .click-for-more {
-  background: #fafafa;
-  border-top: 1px solid #e1e1e1;
-  border: 1px solid #e1e1e1;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3rem;
-  width: 1024px; }
-  .page .content-area .click-for-more span {
-    padding-left: 1rem;
-    margin: .5rem; }
-  .page .content-area .click-for-more button {
-    background: #400c0d;
+    .page-template-about .content-area .about-header h1 {
+      font-size: 2.1rem;
+      margin-bottom: .5rem;
+      text-transform: uppercase; }
+    .page-template-about .content-area .about-header p {
+      margin-bottom: 3rem;
+      margin-top: 0;
+      text-align: center; }
+  .page-template-about .content-area hr {
+    box-sizing: content-box;
+    background-color: #ccc;
+    height: 1px; }
+  .page-template-about .content-area hr.decorative {
     border: none;
-    border-radius: 3px;
-    box-shadow: none;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: .8rem 1.5rem;
-    text-decoration: none;
-    text-shadow: none; }
-    .page .content-area .click-for-more button a {
-      color: #fff; }
-    .page .content-area .click-for-more button:hover {
-      background: #db272a;
-      text-decoration: underline; }
+    color: #e1e1e1;
+    margin: 0 auto 3rem;
+    max-width: 320px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 50%; }
+    .page-template-about .content-area hr.decorative:after {
+      background: 0 0;
+      content: '\f111';
+      color: #e1e1e1;
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 14px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .page-template-about .content-area .entry-content {
+    margin: 1.5rem 0 0;
+    margin-bottom: 4rem; }
+    .page-template-about .content-area .entry-content .about-info {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .page-template-about .content-area .entry-content .about-info .about-info-item {
+        -webkit-flex: 0 1 47.5%;
+            -ms-flex: 0 1 47.5%;
+                flex: 0 1 47.5%; }
+        .page-template-about .content-area .entry-content .about-info .about-info-item h3 {
+          color: #400c0d;
+          font-size: 1.6rem;
+          margin-bottom: 0;
+          margin-top: 0; }
+        .page-template-about .content-area .entry-content .about-info .about-info-item .sub-header {
+          color: #a1a1a1; }
+    .page-template-about .content-area .entry-content .our-story h2 {
+      color: #333333;
+      font-size: 1.8rem;
+      text-align: center; }
+  .page-template-about .content-area .contact-us {
+    background: #fafafa;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px; }
+    .page-template-about .content-area .contact-us p {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      line-height: 1;
+      width: 100%; }
+      .page-template-about .content-area .contact-us p span {
+        margin: .5rem; }
+      .page-template-about .content-area .contact-us p .cta-btn {
+        background: #400c0d;
+        border: none;
+        border-radius: 3px;
+        box-shadow: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: .75rem 1.5rem;
+        text-decoration: none;
+        text-shadow: none; }
+        .page-template-about .content-area .contact-us p .cta-btn:hover {
+          background: #861618;
+          text-decoration: underline; }
 
 /*Products Page*/
 .archive .page-title {
