@@ -48,6 +48,109 @@
 	display: block;
 }
 
+/* Body Layout in Different Pages */
+
+body:not(.home):not(.page-template-about):not(.post-type-archive-product) {
+	.content-area {
+		border-right: $solid_border;
+		padding-right: 5%;
+		width: 73%;
+	}
+
+	.widget-area {
+		padding-bottom: 3rem;
+		padding-left: 5%;
+		padding-top: 3rem;
+		width: 27%;
+	}
+
+}
+
+/*Contact Page*/
+
+.page-id-23 {
+
+	.content-area {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+
+		.entry-title {
+			color: $color_brandnearblack;
+			margin-top: 0;
+			text-transform: uppercase;
+		}
+
+		h3 {
+			color: $color_brandmedgrey;
+			font-size: 1.8rem;
+		}
+
+		.wpcf7-form {
+			margin: 0;
+			padding: 0;
+
+			p {
+				color: $color_brandmedgrey;
+				font-weight: 700;
+				margin-bottom: .5rem;
+			}
+
+			input, textarea {
+				background-color: $color_background_offwhite;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 400;
+				line-height: 1.5;
+				margin-top: .5rem;
+			}
+
+			.asterisk {
+				color: $color_brandred;
+			}
+
+			.name {
+				float: left;
+				margin-right: 1%;
+				width: 49%;
+			}
+
+			.email {
+				float: left;
+				margin-left: 1%;
+				width: 49%;
+			}
+
+			.subject {
+				clear: left;
+
+				input {
+					width: 100%;
+				}
+			}
+
+			input[type=submit] {
+				border-radius: 3px;
+				background: $color_brandbrown;
+				box-shadow: none;
+				color: #fff;
+				cursor: pointer;
+				font-size: 1rem;
+				line-height: 1.5;
+				padding: .75rem 1.5rem;
+				text-decoration: none;
+				text-shadow: none;
+
+				&:hover {
+					background: #861618;
+					text-decoration: underline;
+				}
+			}
+
+		.wpcf7-form-control-wrap {
+			position: relative;
+		}
+	}
+ }
+}
 
 /* Blog */
 
@@ -78,11 +181,6 @@
 }
 
 /*content area flex, sidebar*/
-
-.container {
-	max-width: 1024px;
-	margin: 0 auto;
-}
 
 .blog, .single, .error404, .page:not(.home), .archive:not(.post-type-archive-product) {
 
@@ -135,43 +233,5 @@
 		list-style: none;
 		margin-left: 0;
 		padding-left: 0;
-	}
-}
-
-/*Contact Page*/
-
-.page-id-23 {
-
-	.entry-title {
-		color: $color_brandnearblack;
-		margin-top: 0;
-		text-transform: uppercase;
-	}
-
-	h3 {
-		color: $color_brandmedgrey;
-		font-size: 1.8rem;
-	}
-
-
-	.wpcf7-form {
-		margin: 0;
-		padding: 0;
-
-		p {
-			color: $color_brandmedgrey;
-			font-weight: 700;
-			margin-bottom: .5rem;
-		}
-
-		input, textarea {
-			background-color: $color_background_offwhite;
-		}
-
-		.name {
-			float: left;
-			margin-right: 1%;
-			width: 49%;
-		}
 	}
 }

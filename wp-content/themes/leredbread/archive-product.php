@@ -1,53 +1,50 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The main template file.
  *
- * @ package RED_Starter_Theme
+ * @package RED_Starter_Theme
  */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="container">
 
-			<div class="archive-page container">
 			<?php if ( have_posts() ) : ?>
 
-				<header class="products-header container">
+			<section class="products-header">
 					<?php
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					?>
 					<p>We are a team of creative and talented individuals who love making delicious treats.</p>
-				</header><!-- .page-header -->
+			<!-- .page-header -->
 
 				<hr class="decorative"></hr>
 
-				<section class="menu-items">
+				<div class="menu-items container">
 
-	 			 <div class="menu-item-inner">
-
-	 					 <?php $terms = get_terms( 'product-type');
-	 			  	?>
+	 				<?php $terms = get_terms( 'product-type');
+	 			  ?>
 
 	 				<?php if ( ! empty( $terms ) ) : ?>
 
 	 		 		<?php foreach ($terms as $term) : ?>
 
+	 				 	<div class="menu-item-wrapper>">
+	 					 	<a href="<?php echo get_term_link( $term ); ?>"><img src="<?php echo get_template_directory_uri() . '/images\/' . $term->slug; ?>.png" alt="" />
 
-	 				 <div class="menu-item-wrapper>">
-	 					 <img src="<?php echo get_template_directory_uri() . '/images\/' . $term->slug; ?>.png" alt="" />
+							<h3><?php echo $term->name; ?></h3></a>
 
-							<h3><?php echo $term->name; ?></h3>
-
-	 				 </div>
+	 				 	</div>
 
 	 		 		<?php endforeach; ?>
 
-	 			<?php endif; ?>
+	 			 <?php endif; ?>
 
-	 		  </div>
-	 		 </section>
+			 </div>
+			</section>
 
 			<div class="product-grid container">
 				<?php /* Start the Loop */ ?>
@@ -58,10 +55,11 @@ get_header(); ?>
     				<a href="<?php the_permalink();?>"><?php the_post_thumbnail( 'large' ); ?></a>
     			<?php endif; ?>
 
-        	<?php the_title(); ?>
-
-          <?php echo CFS()->get( 'price' ); ?>
-
+					<div class="product-info">
+        		<span class="product-title"><?php the_title(); ?></span>
+						
+          	<span class="price"><?php echo CFS()->get( 'price' ); ?></span>
+					</div>
 
 				</div>
 			    <?php endwhile; ?>
@@ -76,9 +74,9 @@ get_header(); ?>
 
 	   	<?php endif; ?>
 
+		  </div>
 		</div>
-		</div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	 </main><!-- #main -->
+ </div><!-- #primary -->
 
 <?php get_footer(); ?>

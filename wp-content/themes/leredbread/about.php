@@ -37,7 +37,7 @@
       </div>
       <div class="contact-us container clearfix">
         <p><span>Feel free to contact us with any questions coments or suggestions. We even take custom orders!</span>
-          <a href="<?php bloginfo('template_directory'); ?>/contact" class="cta-btn">Contact Us</a>
+          <a href="<?php bloginfo('template_directory'); ?>/contact" class="btn">Contact Us</a>
         </p>
       </div>
     </div>

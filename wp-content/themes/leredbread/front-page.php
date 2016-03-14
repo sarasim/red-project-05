@@ -37,7 +37,7 @@ get_header(); ?>
 		 	</section>
 		 	<div class="click-for-more container">
 			 	<p><span>All of our products are made fresh daily from locally-sourced ingredients. Our menu is updated frequently.</span>
-					<button><a href="<?php echo get_term_link( $term ); ?>">See Our Products</a></button>
+					<a href="<?php bloginfo('template_directory'); ?>/products" class="btn">See Our Products</a>
 			  </p>
 		 	</div>
  			<section class="latest-posts">
