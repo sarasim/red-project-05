@@ -1401,6 +1401,7 @@ object {
   padding-top: 3rem;
   padding-bottom: 3rem; }
   .page-template-about .content-area .about-header {
+    padding-top: 2rem;
     text-align: center; }
     .page-template-about .content-area .about-header h1 {
       font-size: 2.1rem;
