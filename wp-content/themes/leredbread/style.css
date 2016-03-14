@@ -671,16 +671,26 @@ a {
   display: block; }
 
 /* Body Layout in Different Pages */
+body:not(.home):not(.page-template-about):not(.post-type-archive-product) .site-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px; }
+
 body:not(.home):not(.page-template-about):not(.post-type-archive-product) .content-area {
   border-right: 1px solid #e1e1e1;
   padding-right: 5%;
-  width: 73%; }
+  width: 71%; }
 
 body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widget-area {
-  padding-bottom: 3rem;
   padding-left: 5%;
-  padding-top: 3rem;
-  width: 27%; }
+  width: 29%; }
+
+body:not(.home):not(.page-template-about):not(.post-type-archive-product) .content-area, body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widget-area {
+  padding-bottom: 3rem;
+  padding-top: 3rem; }
 
 /*Contact Page*/
 .page-id-23 .content-area {
@@ -754,24 +764,9 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widge
   .widget-title ul {
     list-style: none; }
 
-/*content area flex, sidebar*/
-.blog .site-content, .single .site-content, .error404 .site-content, .page:not(.home) .site-content, .archive:not(.post-type-archive-product) .site-content {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 1024px;
-  margin: 0 auto; }
-  .blog .site-content .blog-post, .single .site-content .blog-post, .error404 .site-content .blog-post, .page:not(.home) .site-content .blog-post, .archive:not(.post-type-archive-product) .site-content .blog-post {
-    border-right: 1px solid #e1e1e1;
-    width: 73%; }
-  .blog .site-content .widget-area, .single .site-content .widget-area, .error404 .site-content .widget-area, .page:not(.home) .site-content .widget-area, .archive:not(.post-type-archive-product) .site-content .widget-area {
-    padding-left: 5%; }
-
+/* Widget */
 .widget {
-  color: #a1a1a1;
+  color: #808080;
   font-weight: light; }
   .widget .widget-title {
     color: #333333;
@@ -782,10 +777,16 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .widge
     margin-bottom: .5rem; }
   .widget .contact-meta i {
     line-height: 1.5;
-    margin-right: .4rem;
+    margin-right: .5rem;
     width: 20px; }
-  .widget a, .widget .weekday {
+  .widget a {
     color: #db272a; }
+    .widget a:hover {
+      color: #861618;
+      text-decoration: underline; }
+  .widget .weekday {
+    color: #db272a;
+    font-weight: 700; }
   .widget ul {
     font-weight: lighter;
     list-style: none;
@@ -1426,3 +1427,34 @@ object {
           width: 0; }
       .post-type-archive-product .product-grid .product-wrapper .product-info .price {
         padding-top: .25rem; }
+
+.error404 .search-form {
+  font-weight: 700; }
+  .error404 .search-form fieldset {
+    border: 0;
+    padding: 0 0 .75rem;
+    margin-bottom: 0; }
+  .error404 .search-form input {
+    background-color: #fafafa;
+    border: 1px solid #e1e1e1;
+    font-weight: 700;
+    padding: .5rem .3rem; }
+  .error404 .search-form label {
+    color: #808080;
+    margin-bottom: .5rem; }
+  .error404 .search-form button {
+    background: #400c0d;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-shadow: none; }
+    .error404 .search-form button .fa {
+      display: inline-block;
+      font-size: 1rem; }
+
+.error404 h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2.25rem; }

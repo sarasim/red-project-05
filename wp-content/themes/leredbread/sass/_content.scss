@@ -51,19 +51,28 @@
 /* Body Layout in Different Pages */
 
 body:not(.home):not(.page-template-about):not(.post-type-archive-product) {
+	.site-content {
+		display: flex;
+		margin-left: auto;
+		margin-right:auto;
+		width: 1024px;
+	}
+
 	.content-area {
 		border-right: $solid_border;
 		padding-right: 5%;
-		width: 73%;
+		width: 71%;
 	}
 
 	.widget-area {
-		padding-bottom: 3rem;
 		padding-left: 5%;
-		padding-top: 3rem;
-		width: 27%;
+		width: 29%;
 	}
 
+	.content-area, .widget-area {
+		padding-bottom: 3rem;
+		padding-top: 3rem;
+	}
 }
 
 /*Contact Page*/
@@ -180,35 +189,15 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) {
 	}
 }
 
-/*content area flex, sidebar*/
 
-.blog, .single, .error404, .page:not(.home), .archive:not(.post-type-archive-product) {
-
-.site-content {
-	display: flex;
-	flex-direction: row;
-	width: 1024px;
-	margin: 0 auto;
-
-
-	.blog-post {
-		border-right: $solid_border;
-		width: 73%;
-
-	}
-
-	.widget-area {
-		padding-left: 5%;
-  }
- }
-}
+/* Widget */
 
 .widget {
-	color: $color_brandlightgrey;
+	color: $color_brandmedgrey;
 	font-weight: light;
 
 	.widget-title {
-		color: #333333;
+		color: $color_branddarkgrey;
 		font-size: 1.2rem;
 		margin-bottom: .75rem;
 		text-transform: uppercase;
@@ -220,12 +209,22 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) {
 
 	.contact-meta i {
 		line-height: 1.5;
-		margin-right: .4rem;
+		margin-right: .5rem;
 		width: 20px;
 	}
 
-	a, .weekday {
+	a {
 		color: $color_brandred;
+
+		&:hover {
+			color: #861618;
+			text-decoration: underline;
+		}
+	}
+
+	.weekday {
+		color: $color_brandred;
+		font-weight: 700;
 	}
 
 	ul {
