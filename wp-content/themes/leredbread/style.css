@@ -692,6 +692,35 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .conte
   padding-bottom: 3rem;
   padding-top: 3rem; }
 
+/* Widget */
+.widget {
+  color: #808080;
+  font-weight: light; }
+  .widget .widget-title {
+    color: #333333;
+    font-size: 1.2rem;
+    margin-bottom: .75rem;
+    text-transform: uppercase; }
+  .widget p {
+    margin-bottom: .5rem; }
+  .widget .contact-meta i {
+    line-height: 1.5;
+    margin-right: .5rem;
+    width: 20px; }
+  .widget a {
+    color: #db272a; }
+    .widget a:hover {
+      color: #861618;
+      text-decoration: underline; }
+  .widget .weekday {
+    color: #db272a;
+    font-weight: 700; }
+  .widget ul {
+    font-weight: lighter;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0; }
+
 /*Contact Page*/
 .page-id-23 .content-area {
   padding-top: 3rem;
@@ -764,34 +793,12 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .conte
   .widget-title ul {
     list-style: none; }
 
-/* Widget */
-.widget {
-  color: #808080;
-  font-weight: light; }
-  .widget .widget-title {
-    color: #333333;
-    font-size: 1.2rem;
-    margin-bottom: .75rem;
-    text-transform: uppercase; }
-  .widget p {
-    margin-bottom: .5rem; }
-  .widget .contact-meta i {
-    line-height: 1.5;
-    margin-right: .5rem;
-    width: 20px; }
-  .widget a {
-    color: #db272a; }
-    .widget a:hover {
-      color: #861618;
-      text-decoration: underline; }
-  .widget .weekday {
-    color: #db272a;
-    font-weight: 700; }
-  .widget ul {
-    font-weight: lighter;
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0; }
+/* Single Blog Post */
+.single-post .entry-title {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin-bottom: .25rem;
+  text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Header
@@ -1427,6 +1434,15 @@ object {
           width: 0; }
       .post-type-archive-product .product-grid .product-wrapper .product-info .price {
         padding-top: .25rem; }
+
+.single-product .entry-title {
+  font-size: 2.1rem;
+  text-transform: uppercase; }
+
+.single-product .price {
+  font-family: 'Overlock', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700; }
 
 .error404 .search-form {
   font-weight: 700; }
