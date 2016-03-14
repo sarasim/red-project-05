@@ -19,23 +19,34 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<div class="product-menu">
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+        <div class="product-menu-item">
+        	<?php if ( has_post_thumbnail() ) : ?>
+    				<?php the_post_thumbnail( 'small' ); ?>
+    			<?php endif; ?>
 
-			<?php endwhile; ?>
+					<div class="product-info">
+        		<h2 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+						<p class="entry-description"><?php the_content(); ?></p>
+          	<span class="price"><?php echo CFS()->get( 'price' ); ?></span>
+					</div>
 
-			<?php the_posts_navigation(); ?>
+				</div>
+			    <?php endwhile; ?>
 
-		<?php else : ?>
+		    	<?php the_posts_navigation(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+	    	<?php else : ?>
 
-		<?php endif; ?>
+			 <?php get_template_part( 'template-parts/content', 'none' ); ?>
+			 	<?php wp_reset_postdata(); ?>
 
+
+	   	<?php endif; ?>
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

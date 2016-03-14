@@ -205,6 +205,8 @@
 	}
 }
 
+/*Testamonials */
+
 .testamonials {
 	margin-bottom: 3rem;
 
@@ -506,7 +508,6 @@
 		}
 	}
 
-
 	.product-grid {
 		align-content: flex-start;
 		display: flex;
@@ -541,16 +542,67 @@
 	}
 }
 
+/* Single Product Page */
+
 .single-product {
 
 	.entry-title {
+		color: $color_brandnearblack;
 		font-size: 2.1rem;
 		text-transform: uppercase;
 	}
 
 	.price {
+		color: $color_brandnearblack;
 		font-family: 'Overlock', sans-serif;
 		font-size: 1.5rem;
 		font-weight: 700;
+	}
+}
+
+/*Taxonomy Product Type */
+
+.tax-product-type {
+
+	.page-header {
+		border-bottom: $dashed_border;
+		margin-bottom: 1rem;
+
+		.page-title {
+			color: $color_brandnearblack;
+			text-transform: uppercase;
+		}
+	}
+
+	.product-menu {
+
+		.product-menu-item {
+			align-items: flex-start;
+			border-bottom: $dashed_border;
+			display: flex;
+
+			img {
+				display: block;
+				height: 150px;
+				margin-top: 2rem;
+				min-width: 150px;
+				width: 150px;
+			}
+
+			.product-info {
+				margin-bottom: 1.5rem;
+				padding-left: 1.5rem;
+
+				.entry-title {
+					color: $color_brandred;
+					font-size: 1.8rem;
+			  }
+
+				a:hover{
+					color: #861618;
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 }

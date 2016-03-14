@@ -721,7 +721,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .conte
     margin-left: 0;
     padding-left: 0; }
 
-/*Contact Page*/
+/* Contact Page */
 .page-id-23 .content-area {
   padding-top: 3rem;
   padding-bottom: 3rem; }
@@ -1006,7 +1006,8 @@ object {
 .home {
   /* Menu of Products */
   /* See Our Products */
-  /* Our Latest News */ }
+  /* Our Latest News */
+  /*Testamonials */ }
   .home .banner {
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -1435,14 +1436,49 @@ object {
       .post-type-archive-product .product-grid .product-wrapper .product-info .price {
         padding-top: .25rem; }
 
+/* Single Product Page */
 .single-product .entry-title {
+  color: #222222;
   font-size: 2.1rem;
   text-transform: uppercase; }
 
 .single-product .price {
+  color: #222222;
   font-family: 'Overlock', sans-serif;
   font-size: 1.5rem;
   font-weight: 700; }
+
+/*Taxonomy Product Type */
+.tax-product-type .page-header {
+  border-bottom: 1px dashed #d2d2d2;
+  margin-bottom: 1rem; }
+  .tax-product-type .page-header .page-title {
+    color: #222222;
+    text-transform: uppercase; }
+
+.tax-product-type .product-menu .product-menu-item {
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 1px dashed #d2d2d2;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .tax-product-type .product-menu .product-menu-item img {
+    display: block;
+    height: 150px;
+    margin-top: 2rem;
+    min-width: 150px;
+    width: 150px; }
+  .tax-product-type .product-menu .product-menu-item .product-info {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem; }
+    .tax-product-type .product-menu .product-menu-item .product-info .entry-title {
+      color: #db272a;
+      font-size: 1.8rem; }
+    .tax-product-type .product-menu .product-menu-item .product-info a:hover {
+      color: #861618;
+      text-decoration: underline; }
 
 .error404 .search-form {
   font-weight: 700; }
