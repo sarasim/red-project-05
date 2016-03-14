@@ -16,4 +16,47 @@
 	display: none;
 }
 
-/*side bar*/
+/* Side bar Widget */
+
+.widget {
+	color: $color_brandmedgrey;
+	font-weight: light;
+
+	.widget-title {
+		color: $color_branddarkgrey;
+		font-size: 1.2rem;
+		margin-bottom: .75rem;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-bottom: .5rem;
+	}
+
+	.contact-meta i {
+		line-height: 1.5;
+		margin-right: .5rem;
+		width: 20px;
+	}
+
+	a {
+		color: $color_brandred;
+
+		&:hover {
+			color: #861618;
+			text-decoration: underline;
+		}
+	}
+
+	.weekday {
+		color: $color_brandred;
+		font-weight: 700;
+	}
+
+	ul {
+		font-weight: lighter;
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+}

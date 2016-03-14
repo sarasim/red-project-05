@@ -52,8 +52,9 @@ get_header(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
+
+			<?php get_sidebar(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

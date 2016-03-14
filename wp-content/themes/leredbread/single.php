@@ -14,9 +14,8 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-			<?php the_post_navigation(); ?>
 
-			<?php get_comments(); ?>
+			<hr></hr>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
@@ -24,8 +23,6 @@ get_header(); ?>
 					comments_template();
 				endif;
 			?>
-
-				<button type="button" id="close-comments">Close Comments</button>
 
 		<?php endwhile; // End of the loop. ?>
 

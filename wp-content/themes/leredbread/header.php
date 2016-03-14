@@ -26,7 +26,7 @@
 				 	<div class="site-branding-inner container">
 						<div class="logo">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<img src="<?php echo get_template_directory_uri() . '/images/lrb-logo.svg'; ?>" alt="Le Red Bread Logo" /></a>	
+								<img src="<?php echo get_template_directory_uri() . '/images/lrb-logo.svg'; ?>" alt="Le Red Bread Logo" /></a>
 						</div>
 						<div class="social-icons">
 							<ul>
@@ -48,7 +48,7 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			<!-- #site-navigation -->
 					</div>
-					<div class="search-form">
+					<div class="search-form-1">
 						<form class="search-form-inner"	input="text" ><?php get_search_form();?></form>
 					</div>
 				</div>
