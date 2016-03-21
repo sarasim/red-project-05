@@ -163,6 +163,10 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) {
 
 /* Blog */
 
+.hentry {
+	margin-bottom: 4.5rem;
+}
+
 .entry-header {
 
 	 a {
@@ -192,6 +196,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) {
 /* Single Blog Post */
 
 .single-post {
+	margin: 0 0 4.5rem;
 
 	.entry-title {
 		font-size: 2.1rem;

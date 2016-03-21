@@ -776,6 +776,9 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .conte
       position: relative; }
 
 /* Blog */
+.hentry {
+  margin-bottom: 4.5rem; }
+
 .entry-header a {
   color: #db272a; }
 
@@ -793,87 +796,78 @@ body:not(.home):not(.page-template-about):not(.post-type-archive-product) .conte
     list-style: none; }
 
 /* Single Blog Post */
-.single-post .entry-title {
-  font-size: 2.1rem;
-  line-height: 1.2;
-  margin-bottom: .25rem;
-  text-transform: uppercase; }
-
-.single-post .comments-link a:hover {
-  color: #861618;
-  text-decoration: underline; }
-
-.single-post .entry-content {
-  margin: 1.5rem 0 0; }
-
-.single-post blockquote {
-  border-left: 2rem solid #db272a; }
-
-.single-post .entry-footer .cat-links {
-  margin-right: 1.5rem; }
-
-.single-post hr {
-  box-sizing: content-box;
-  background-color: #ccc;
-  height: 1px; }
-
-.single-post hr.decorative {
-  border: none;
-  color: #e1e1e1;
-  margin: 0 auto 3rem;
-  max-width: 320px;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  width: 50%; }
-  .single-post hr.decorative:after {
-    background: 0 0;
-    content: '\f111';
-    color: #e1e1e1;
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: 14px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
-
-.single-post .comments-title {
-  color: #808080;
-  font-size: 1.8rem; }
-
-.single-post ol {
-  list-style: none;
-  margin-left: 0;
-  padding-left: .5rem; }
-
-.single-post .comment {
-  padding-top: 1.5rem; }
-
-.single-post .comment-body {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: 1px dashed #d2d2d2; }
-  .single-post .comment-body .comment-author-avatar {
-    border-radius: 50%;
-    height: 64px;
-    margin-right: 1.5rem;
-    overflow: hidden;
-    width: 64px; }
-  .single-post .comment-body .comment-content .comment-author, .single-post .comment-body .comment-content .fn {
-    color: #222222;
-    font-style: normal;
-    font-weight: 700; }
-  .single-post .comment-body .comment-content .comment-metadata {
-    color: #808080; }
-  .single-post .comment-body .comment-content a:hover {
+.single-post {
+  margin: 0 0 4.5rem; }
+  .single-post .entry-title {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: .25rem;
+    text-transform: uppercase; }
+  .single-post .comments-link a:hover {
     color: #861618;
     text-decoration: underline; }
-
-.single-post .comment-reply-title {
-  color: #400c0d;
-  font-size: 1.6rem; }
+  .single-post .entry-content {
+    margin: 1.5rem 0 0; }
+  .single-post blockquote {
+    border-left: 2rem solid #db272a; }
+  .single-post .entry-footer .cat-links {
+    margin-right: 1.5rem; }
+  .single-post hr {
+    box-sizing: content-box;
+    background-color: #ccc;
+    height: 1px; }
+  .single-post hr.decorative {
+    border: none;
+    color: #e1e1e1;
+    margin: 0 auto 3rem;
+    max-width: 320px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 50%; }
+    .single-post hr.decorative:after {
+      background: 0 0;
+      content: '\f111';
+      color: #e1e1e1;
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 14px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .single-post .comments-title {
+    color: #808080;
+    font-size: 1.8rem; }
+  .single-post ol {
+    list-style: none;
+    margin-left: 0;
+    padding-left: .5rem; }
+  .single-post .comment {
+    padding-top: 1.5rem; }
+  .single-post .comment-body {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px dashed #d2d2d2; }
+    .single-post .comment-body .comment-author-avatar {
+      border-radius: 50%;
+      height: 64px;
+      margin-right: 1.5rem;
+      overflow: hidden;
+      width: 64px; }
+    .single-post .comment-body .comment-content .comment-author, .single-post .comment-body .comment-content .fn {
+      color: #222222;
+      font-style: normal;
+      font-weight: 700; }
+    .single-post .comment-body .comment-content .comment-metadata {
+      color: #808080; }
+    .single-post .comment-body .comment-content a:hover {
+      color: #861618;
+      text-decoration: underline; }
+  .single-post .comment-reply-title {
+    color: #400c0d;
+    font-size: 1.6rem; }
 
 .comment-form {
   display: -webkit-flex;
