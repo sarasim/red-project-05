@@ -498,6 +498,7 @@ a {
   clear: both;
   display: block;
   float: left;
+  height: 3.2rem;
   width: 100%; }
   .main-navigation ul {
     display: none;

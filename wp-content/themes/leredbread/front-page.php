@@ -37,13 +37,13 @@ get_header(); ?>
 		 	</section>
 		 	<div class="click-for-more container">
 			 	<p><span>All of our products are made fresh daily from locally-sourced ingredients. Our menu is updated frequently.</span>
-					<a href="<?php get_template_directory_uri(); ?>/redbread/products" class="btn">See Our Products</a>
+					<a href="<?php bloginfo('template_directory'); ?>/redbread/products" class="btn">See Our Products</a>
 			  </p>
 		 	</div>
  			<section class="latest-posts">
 				<div class="latest-posts-inner container">
 			 	 <h2>Our Latest News</h2>
-			 	 <hr class="decorative"></hr>
+			 	 <hr class="decorative" />
 
 			 		<?php $args = array( 'post_type' => 'post', 'posts_per_page' => 4 ); $latest_posts = get_posts( $args );?>
 
@@ -79,7 +79,7 @@ get_header(); ?>
 			<section class="testamonials container">
 				<div class="testamonials-inner container">
 					<h2> What Others Say About Us</h2>
-					<hr class="decorative"></hr>
+					<hr class="decorative" />
 						<ul>
 							<li>
 								<img src="<?php bloginfo('template_directory'); ?>/images/testimonial-headshots/dr-dosist-headshot.png" alt="Dr. Dosist's Headshot" />
