@@ -37,7 +37,7 @@ get_header(); ?>
 		 	</section>
 		 	<div class="click-for-more container">
 			 	<p><span>All of our products are made fresh daily from locally-sourced ingredients. Our menu is updated frequently.</span>
-					<a href="<?php bloginfo('template_directory'); ?>/redbread/products" class="btn">See Our Products</a>
+					<a href="<?php get_template_directory_uri(); ?>/redbread/products" class="btn">See Our Products</a>
 			  </p>
 		 	</div>
  			<section class="latest-posts">

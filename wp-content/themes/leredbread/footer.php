@@ -24,7 +24,7 @@
 					</div>
 					<div class="footer-inner-item">
 						<div class="footer-logo">
-							<img src="<?php bloginfo('template_directory'); ?>/images/lrb-logo-white.svg " alt="Le Red Bread Logo" />
+							<img src="<?php get_template_directory_uri(); ?>/images/lrb-logo-white.svg " alt="Le Red Bread Logo" />
 						</div>
 					</div>
 					 <div class="footer-inner-item">
